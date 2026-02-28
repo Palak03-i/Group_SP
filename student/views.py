@@ -124,6 +124,11 @@ def assessment_view(request):
         return redirect('student:assessment_result')
     return render(request, 'student/assessment.html')
 
+@login_required
+def chatbot_view(request):
+    if getattr(request.user, 'role', None) != 'Student':
+        return redirect('accounts:login')
+    return render(request, 'student/chatbot.html')
 
 @login_required
 def assessment_result_view(request):
@@ -158,3 +163,5 @@ def book_session_view(request):
         messages.success(request, 'Appointment requested. Counsellor will confirm.')
         return redirect('student:student_dashboard')
     return render(request, 'student/book_session.html')
+
+

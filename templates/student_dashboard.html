@@ -7,15 +7,28 @@
 <div class="card">
     <h2 style="margin-top: 0; color: #2d5a87;">Quick Actions</h2>
     <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="#" class="btn" style="flex: 1; min-width: 150px; text-align: center;">
+        
+        <!-- Chatbot -->
+        <a href="{% url 'student:chatbot' %}" 
+            class="btn" 
+            style="flex: 1; min-width: 150px; text-align: center;">
             💬 Chatbot
         </a>
-        <a href="#" class="btn" style="flex: 1; min-width: 150px; text-align: center;">
+
+        <!-- Assessment -->
+        <a href="{% url 'student:assessment' %}" 
+           class="btn" 
+           style="flex: 1; min-width: 150px; text-align: center;">
             📋 Take Assessment
         </a>
-        <a href="#" class="btn" style="flex: 1; min-width: 150px; text-align: center;">
+
+        <!-- Book Session -->
+        <a href="{% url 'student:book_session' %}" 
+           class="btn" 
+           style="flex: 1; min-width: 150px; text-align: center;">
             📅 Book Session
         </a>
+
     </div>
 </div>
 
